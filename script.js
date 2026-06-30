@@ -9,8 +9,7 @@ const projects = [
   },
   {
     title: "Video 2",
-    videoUrl:
-      "https://res.cloudinary.com/dhxdqnpxb/video/upload/q_auto,f_auto/v1774719097/video1_r4sjcg.mp4",
+    videoUrl: "assets/BOJANALYA fin.mp4",
   },
   {
     title: "Video 3",
@@ -79,6 +78,10 @@ const tools = [
 ];
 
 function getCloudinaryPoster(videoUrl) {
+  if (!videoUrl.includes("res.cloudinary.com")) {
+    return "";
+  }
+
   return videoUrl.replace(
     /\/video\/upload\/(?:[^/]+\/)?(v\d+\/.*)\.mp4$/,
     "/video/upload/q_auto,f_jpg,so_1/$1.jpg",
@@ -92,10 +95,15 @@ function createVideoCard(project, index) {
   card.setAttribute("aria-label", `Open ${project.title}`);
   card.style.transitionDelay = `${index * 45}ms`;
 
+  const posterUrl = getCloudinaryPoster(project.videoUrl);
+  const mediaMarkup = posterUrl
+    ? `<img src="${posterUrl}" alt="" loading="lazy" decoding="async">`
+    : `<video src="${project.videoUrl}" muted playsinline preload="metadata"></video>`;
+
   card.innerHTML = `
     <div class="video-inner">
       <div class="video-frame">
-        <img src="${getCloudinaryPoster(project.videoUrl)}" alt="" loading="lazy" decoding="async">
+        ${mediaMarkup}
         <div class="play"><span aria-hidden="true"><i class="fa-solid fa-play"></i></span></div>
         <div class="video-meta">
           <h3>${project.title}</h3>
@@ -106,8 +114,8 @@ function createVideoCard(project, index) {
   `;
 
   const frame = card.querySelector(".video-frame");
-  const poster = card.querySelector("img");
-  let previewVideo = null;
+  const poster = frame.querySelector("img, video");
+  let previewVideo = poster instanceof HTMLVideoElement ? poster : null;
 
   card.addEventListener("mouseenter", () => {
     document.querySelectorAll(".video-card").forEach((other) => {
@@ -121,7 +129,7 @@ function createVideoCard(project, index) {
     if (!previewVideo) {
       previewVideo = document.createElement("video");
       previewVideo.src = project.videoUrl;
-      previewVideo.poster = getCloudinaryPoster(project.videoUrl);
+      if (posterUrl) previewVideo.poster = posterUrl;
       previewVideo.muted = true;
       previewVideo.loop = true;
       previewVideo.playsInline = true;
