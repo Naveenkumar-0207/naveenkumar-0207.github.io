@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naveen | Video Editor</title>
+    <meta
+      name="description"
+      content="Naveen Creative portfolio for video editing, motion graphics, social reels, and AI-assisted visual storytelling."
+    />
+    <meta name="author" content="Naveen Creative" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='black'/%3E%3Cpath d='M9 24V8h4l6 9V8h4v16h-4l-6-9v9H9z' fill='%23ffb21a'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-backdrop" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="nav-shell">
+        <a class="brand" href="#home"><span>N</span>aveen</a>
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <a href="#home">Home</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#workflow">Workflow</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a class="nav-cta" href="#contact">Start Project <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+        <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+          <a href="#home">Home</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#workflow">Workflow</a>
+          <a href="#services">Services</a>
+          <a href="#contact"><i class="fa-solid fa-envelope" aria-hidden="true"></i>Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero section-reveal" id="home">
+        <div class="hero-light" aria-hidden="true"></div>
+        <div class="hero-angle" aria-hidden="true"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <div class="badge"><span></span>1+ Years Experience</div>
+            <h1>
+              <span>Hi, I'm Naveen,</span>
+              <strong>Crafting</strong>
+              <em>Cinematic</em>
+              <strong>Visual Stories</strong>
+            </h1>
+            <p>
+              I help creators and brands turn raw footage into sharp, modern
+              visuals with stronger pacing, better storytelling, and cleaner
+              delivery.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#contact">Start a Project</a>
+              <a class="button button-ghost" href="#portfolio">View Portfolio</a>
+            </div>
+            <div class="focus-tags" aria-label="Focus areas">
+              <span>Video editing</span>
+              <span>Motion graphics</span>
+              <span>Brand visuals</span>
+            </div>
+          </div>
+
+          <div class="portrait-wrap" data-tilt>
+            <div class="portrait-glow" aria-hidden="true"></div>
+            <img
+              src="assets/personal-iamge.png"
+              alt="Naveen video editor portrait"
+              class="portrait"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="portfolio section-padding" id="portfolio">
+        <div class="container">
+          <div class="section-heading">
+            <span>Featured edits</span>
+            <h2>My <em>Video Portfolio</em></h2>
+            <p>
+              A mix of creator-first edits, motion-heavy brand work, and visual
+              storytelling made to stop the scroll.
+            </p>
+          </div>
+          <div class="video-grid" id="videoGrid"></div>
+          <div class="center-action">
+            <a
+              class="button button-primary"
+              href="https://drive.google.com/drive/folders/1CFnd_GHx1YAI82_eqWN8WzsTj8qx90KY"
+              target="_blank"
+              rel="noreferrer"
+            >
+             View More videos <span aria-hidden="true"><i class="fa-solid fa-arrow-right-long"></i></span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <div class="yellow-line" aria-hidden="true"></div>
+
+      <section class="section-padding workflow" id="workflow" style="padding-bottom:0px ;">
+        <div class="container narrow">
+          <div class="section-heading">
+            <span>Workflow</span>
+            <h2>Production <em>Pipeline</em></h2>
+            <p>
+              A scroll-built process from concept to delivery, designed for
+              speed, clarity, and polished final output.
+            </p>
+          </div>
+          <div class="timeline" id="timeline"></div>
+        </div>
+      </section>
+
+      <section class="section-padding services" id="services">
+        <div class="container">
+          <div class="section-heading">
+            <span>Services</span>
+            <h2>What I <em>Deliver</em></h2>
+            <p>
+              Flexible editing and design support for creators, campaigns, and
+              brands that want a sharper motion language.
+            </p>
+          </div>
+          <div class="service-grid" id="serviceGrid"></div>
+        </div>
+      </section>
+
+      <section class="section-padding tools">
+        <div class="wave" aria-hidden="true"></div>
+        <div class="container">
+          <div class="section-heading">
+            <span>Arsenal</span>
+            <h2>Tool <em>Command Center</em></h2>
+            <p>
+              Software fluency paired with fast iteration, motion layering, and
+              AI-assisted creative workflows.
+            </p>
+          </div>
+          <div class="tool-grid" id="toolGrid"></div>
+        </div>
+      </section>
+
+      <div class="yellow-line" aria-hidden="true"></div>
+
+      <section class="section-padding contact" id="contact">
+        <div class="container">
+          <div class="section-heading">
+            <span>Get In Touch</span>
+            <h2>Send a <em>Project Brief</em></h2>
+            <p>
+              Let clients fill out a clean, readable brief that opens directly
+              as an email draft to naveen2807123@gmail.com.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <aside class="contact-notes">
+              <article class="glass-card contact-card">
+                <div class="mini-icon">M</div>
+                <div>
+                  <span>Destination Email</span>
+                  <a href="mailto:naveen2807123@gmail.com">naveen2807123@gmail.com</a>
+                  <p>
+                    Client messages are prepared in a structured format before
+                    sending, so the inquiry is easier to read and reply to.
+                  </p>
+                </div>
+              </article>
+              <article class="glass-card contact-card">
+                <div class="mini-icon">P</div>
+                <div>
+                  <span>Phone Number</span>
+                  <a href="tel:8667655030">8667655030</a>
+                  <p>
+                    Clients can call directly for urgent briefs, quick scope
+                    checks, or project availability.
+                  </p>
+                </div>
+              </article>
+              <article class="glass-card note">
+                <span>Direct Inbox</span>
+                <p>Every brief opens a ready-to-send email draft to Naveen.</p>
+              </article>
+              <article class="glass-card note">
+                <span>Structured Format</span>
+                <p>
+                  Client details, scope, references, and project brief stay
+                  clean and easy to scan.
+                </p>
+              </article>
+              <article class="glass-card note">
+                <span>Fallback Ready</span>
+                <p>
+                  If the email app does not open, visitors can copy the full
+                  brief in one click.
+                </p>
+              </article>
+            </aside>
+
+            <form class="brief-form glass-card" id="briefForm">
+              <div class="form-block">
+                <span>01 / Client Details</span>
+                <h3>Who is reaching out?</h3>
+                <div class="form-row">
+                  <label>
+                    Client Name
+                    <input name="name" type="text" placeholder="Enter client name" />
+                  </label>
+                  <label>
+                    Client Email
+                    <input name="email" type="email" placeholder="client@example.com" />
+                  </label>
+                </div>
+                <label>
+                  Brand or Company
+                  <input
+                    name="brand"
+                    type="text"
+                    placeholder="Brand, agency, channel, or company name"
+                  />
+                </label>
+              </div>
+
+              <div class="form-block">
+                <span>02 / Project Scope</span>
+                <h3>What needs to be made?</h3>
+                <div class="form-row">
+                  <label>
+                    Project Type
+                    <select name="type">
+                      <option value="">Select a project type</option>
+                      <option>Video Editing</option>
+                      <option>Motion Graphics</option>
+                      <option>YouTube Content</option>
+                      <option>Social Media Reels</option>
+                      <option>Ad Creatives</option>
+                      <option>AI Video</option>
+                      <option>Branding</option>
+                    </select>
+                  </label>
+                  <label>
+                    Budget Range
+                    <select name="budget">
+                      <option value="">Select budget range</option>
+                      <option>INR 5K - INR 15K</option>
+                      <option>INR 15K - INR 50K</option>
+                      <option>INR 50K - INR 1L</option>
+                      <option>INR 1L+</option>
+                    </select>
+                  </label>
+                </div>
+                <label>
+                  Deadline
+                  <input
+                    name="deadline"
+                    type="text"
+                    placeholder="For example: 2 weeks, urgent, or flexible"
+                  />
+                </label>
+                <label>
+                  Reference Links
+                  <textarea
+                    name="references"
+                    rows="3"
+                    placeholder="Add drive links, YouTube links, Behance examples, or notes."
+                  ></textarea>
+                </label>
+              </div>
+
+              <div class="form-block">
+                <span>03 / Project Brief</span>
+                <h3>Give the message real context</h3>
+                <label>
+                  Project Brief
+                  <textarea
+                    name="message"
+                    rows="6"
+                    placeholder="Describe the goal, deliverables, audience, tone, and what success looks like."
+                  ></textarea>
+                </label>
+              </div>
+
+              <p class="feedback" id="feedback" hidden></p>
+              <div class="form-actions">
+                <button class="button button-primary" type="submit">Send Email Brief</button>
+                <button class="button button-ghost" id="copyBrief" type="button">Copy Brief</button>
+              </div>
+              <p class="form-help">
+                The primary action opens the visitor's default mail app with a
+                ready-to-send draft. The copy action is there as a clean fallback.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-main">
+        <div>
+          <h3><span>N</span>aveen Creative</h3>
+          <p>
+            Video editing and motion design for creators and brands who want a
+            cleaner visual presence.
+          </p>
+        </div>
+        <nav aria-label="Footer navigation">
+          <a href="#home">Home</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a class="footer-email" href="mailto:naveen2807123@gmail.com">naveen2807123@gmail.com</a>
+      </div>
+      <div class="copyright">Copyright <span id="year"></span> Naveen Creative. All rights reserved.</div>
+    </footer>
+
+    <dialog class="video-modal" id="videoModal" aria-labelledby="modalTitle">
+      <button class="modal-close" type="button" aria-label="Close video">x</button>
+      <div class="modal-video-wrap">
+        <video id="modalVideo" controls playsinline preload="metadata"></video>
+      </div>
+      <div class="modal-caption">
+        <h3 id="modalTitle">Video</h3>
+        <p>Playback ready</p>
+      </div>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
