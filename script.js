@@ -63,7 +63,7 @@ const steps = [
 const services = [
   ["VC", "Video Editing", "Professional cuts, pacing, and storytelling for any platform."],
   ["MG", "Motion Graphics", "Animated titles, intros, transitions, and visual effects."],
-  ["SM", "Social Media Reels", "Scroll-stopping vertical content for Instagram and TikTok."],
+  ["SM", "Social Media Reels", "Scroll-stopping vertical content for Instagram. "],
   ["AI", "AI Video Generation", "Next-gen content using AI-assisted tools and rapid iteration."],
   ["TH", "Thumbnail Design", "Click-worthy visual systems with proven CTR instincts."],
 ];
